@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品详情 - 生鲜购物网站</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="main-header">
+        <div class="logo">
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="菜单">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <img src="images/logo.png" alt="生鲜Logo">
+            <h1>生鲜购物网站</h1>
+        </div>
+        <nav id="navbar" class="nav-menu">
+            <a href="index.html">首页</a>
+            <a href="index.html#products">商品展示</a>
+            <a href="cart.html">购物车</a>
+            <a href="orders.html">订单管理</a>
+            <a href="login.html">登录</a>
+            <a href="register.html">注册</a>
+        </nav>
+        <div class="header-actions">
+            <button id="dark-mode-toggle" type="button">夜间模式</button>
+            <div id="current-date" class="current-date"></div>
+            <div id="user-status"></div>
+        </div>
+    </header>
+    <main>
+        <div class="breadcrumb">
+            <a href="index.html">首页</a>
+            <span> / </span>
+            <a href="index.html#products">商品展示</a>
+            <span> / 商品详情</span>
+        </div>
+        <section class="product-detail">
+            <div id="product-detail-content">
+                <!-- 产品详情将通过JavaScript动态添加 -->
+            </div>
+        </section>
+        <section class="related-products" id="related-products">
+            <h3>相关推荐</h3>
+            <div class="related-list" id="related-list">
+                <!-- 相关推荐将通过JavaScript动态添加 -->
+            </div>
+        </section>
+        <div class="detail-footer">
+            <a class="secondary" href="index.html#products">返回商品列表</a>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>关于我们</h4>
+                <p>生鲜购物网站致力于为您提供最新鲜、最安全的生鲜食材。</p>
+            </div>
+            <div class="footer-section">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="index.html#products">商品展示</a></li>
+                    <li><a href="cart.html">购物车</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>联系方式</h4>
+                <p>电话: 400-123-4567</p>
+                <p>邮箱: support@freshfood.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 生鲜购物网站. 版权所有.</p>
+        </div>
+    </footer>
+    <div id="toast"></div>
+    <script src="script.js"></script>
+</body>
+</html>

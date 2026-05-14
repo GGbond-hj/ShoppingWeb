@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生鲜购物网站</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="main-header">
+        <div class="logo">
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="菜单">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <img src="images/logo.png" alt="生鲜Logo">
+            <h1>生鲜购物网站</h1>
+        </div>
+        <nav id="navbar" class="nav-menu">
+            <a href="index.html">首页</a>
+            <a href="index.html#products">商品展示</a>
+            <a href="cart.html">购物车</a>
+            <a href="orders.html">订单管理</a>
+            <a href="login.html">登录</a>
+            <a href="register.html">注册</a>
+        </nav>
+        <div class="header-actions">
+            <button id="dark-mode-toggle" type="button">夜间模式</button>
+            <div id="current-date" class="current-date"></div>
+            <div id="user-status"></div>
+        </div>
+    </header>
+
+    <!-- 公告栏 -->
+    <div class="announcement-bar" id="announcement-bar">
+        <span class="announcement-icon">📢</span>
+        <span class="announcement-text">新鲜上线！全场水果8折优惠，限时抢购中！</span>
+        <button class="announcement-close" id="announcement-close" aria-label="关闭">×</button>
+    </div>
+    <main>
+        <div class="breadcrumb">
+            <span>首页</span>
+        </div>
+        <section class="hero">
+            <div class="hero-left">
+                <h2>鲜活到家 · 绿色生活</h2>
+                <p>优选生鲜食材，新鲜直送，健康安心。立即浏览热卖商品，开启美味之旅。</p>
+                <div class="hero-actions">
+                    <a class="hero-btn" href="index.html#products">立即选购</a>
+                    <a class="hero-btn secondary" href="cart.html">查看购物车</a>
+                </div>
+            </div>
+            <div class="hero-search">
+                <input id="search-input" type="search" placeholder="搜索商品，如苹果、牛奶、鸡蛋..." autocomplete="off">
+                <button id="search-btn" type="button">搜索</button>
+                <div class="search-suggestions" id="search-suggestions"></div>
+                <div class="search-history" id="search-history"></div>
+            </div>
+        </section>
+        <section class="carousel-section">
+            <div class="section-header">
+                <h2>精彩轮播</h2>
+                <p>每日优选新鲜好物，直观展示本期主推商品。</p>
+            </div>
+            <div class="carousel-wrapper">
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="images/banner1.jpg" alt="新鲜水果大促">
+                        <div class="carousel-caption">
+                            <h3>鲜果大促</h3>
+                            <p>精选时令水果，鲜甜入味，限时抢购。</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/banner2.jpg" alt="绿色蔬菜直达">
+                        <div class="carousel-caption">
+                            <h3>绿色蔬菜直达</h3>
+                            <p>营养新鲜，温暖厨房中的健康选择。</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/banner3.jpg" alt="优质肉类精选">
+                        <div class="carousel-caption">
+                            <h3>优质肉类精选</h3>
+                            <p>优选肉品，鲜美多汁，安心品质。</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn prev" type="button">‹</button>
+                <button class="carousel-btn next" type="button">›</button>
+            </div>
+        </section>
+        <section id="products" class="products-section">
+            <div class="section-header">
+                <h2>商品展示</h2>
+                <p>按分类筛选，快速找到您需要的生鲜好物。</p>
+            </div>
+            <div class="categories">
+                <button class="category-btn active" data-category="all">全部</button>
+                <button class="category-btn" data-category="水果">水果</button>
+                <button class="category-btn" data-category="蔬菜">蔬菜</button>
+                <button class="category-btn" data-category="肉类">肉类</button>
+                <button class="category-btn" data-category="乳制品">乳制品</button>
+                <button class="category-btn" data-category="蛋类">蛋类</button>
+            </div>
+            <div class="sort-controls">
+                <span>排序：</span>
+                <button class="sort-btn active" data-sort="default">默认</button>
+                <button class="sort-btn" data-sort="price-asc">价格↑</button>
+                <button class="sort-btn" data-sort="price-desc">价格↓</button>
+                <button class="sort-btn" data-sort="rating">评分</button>
+                <button class="sort-btn" data-sort="sales">销量</button>
+                <span class="divider">|</span>
+                <label class="filter-high-rating">
+                    <input type="checkbox" id="filter-high-rating"> 高评分(4星+)
+                </label>
+            </div>
+            <div class="product-list">
+                <!-- 产品将通过JavaScript动态添加 -->
+            </div>
+        </section>
+        <section class="recommend-section">
+            <div class="section-header">
+                <h2>热门推荐</h2>
+                <p>根据销量与好评，为您推荐本周热销商品。</p>
+            </div>
+            <div class="recommend-list">
+                <!-- 推荐商品将通过JavaScript动态添加 -->
+            </div>
+        </section>
+
+        <!-- 最近浏览 -->
+        <section class="recently-viewed-section" id="recently-viewed-section">
+            <div class="section-header">
+                <h2>最近浏览</h2>
+                <p>您最近浏览过的商品，方便快速回顾。</p>
+            </div>
+            <div class="recently-viewed-list" id="recently-viewed-list">
+                <!-- 最近浏览商品将通过JavaScript动态添加 -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>关于我们</h4>
+                <p>生鲜购物网站致力于为您提供最新鲜、最安全的生鲜食材，直送到家。</p>
+            </div>
+            <div class="footer-section">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="index.html#products">商品展示</a></li>
+                    <li><a href="cart.html">购物车</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>联系方式</h4>
+                <p>电话: 400-123-4567</p>
+                <p>邮箱: support@freshfood.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 生鲜购物网站. 版权所有. 保留所有权利.</p>
+        </div>
+    </footer>
+    <div id="toast"></div>
+    <script src="script.js"></script>
+</body>
+</html>

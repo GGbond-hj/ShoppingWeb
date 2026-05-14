@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录 - 生鲜购物网站</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="生鲜Logo">
+            <h1>生鲜购物网站</h1>
+        </div>
+        <nav id="navbar">
+            <a href="index.html">首页</a>
+            <a href="index.html#products">商品展示</a>
+            <a href="cart.html">购物车</a>
+            <a href="orders.html">订单管理</a>
+            <a href="login.html">登录</a>
+            <a href="register.html">注册</a>
+        </nav>
+        <div class="header-actions">
+            <button id="dark-mode-toggle" type="button">夜间模式</button>
+            <div id="current-date" class="current-date"></div>
+            <div id="user-status"></div>
+        </div>
+    </header>
+    <main>
+        <section class="form-section">
+            <h2>用户登录</h2>
+            <form id="login-form">
+                <label for="username">用户名:</label>
+                <input type="text" id="username" name="username" autocomplete="username" required>
+                <label for="password">密码:</label>
+                <input type="password" id="password" name="password" autocomplete="current-password" required>
+                <label class="checkbox-label"><input type="checkbox" id="remember-me"> 记住我</label>
+                <button type="submit">登录</button>
+            </form>
+            <p>还没有账户？<a href="register.html">注册</a></p>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>关于我们</h4>
+                <p>生鲜购物网站致力于为您提供最新鲜、最安全的生鲜食材。</p>
+            </div>
+            <div class="footer-section">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="index.html#products">商品展示</a></li>
+                    <li><a href="register.html">注册</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>联系方式</h4>
+                <p>电话: 400-123-4567</p>
+                <p>邮箱: support@freshfood.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 生鲜购物网站. 版权所有.</p>
+        </div>
+    </footer>
+    <div id="toast"></div>
+    <script src="script.js"></script>
+</body>
+</html>
