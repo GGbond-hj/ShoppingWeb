@@ -19,8 +19,8 @@ const products = [
     { id: 7, name: '纯牛奶', price: 8.9, originalPrice: 12.9, image: 'images/milk.jpg', category: '乳制品', description: '纯牛奶1L装，营养丰富，奶源纯正，可直接饮用或搭配早餐麦片。', rating: 4.9, sales: 3892, tag: 'sale', unit: '1L' },
     { id: 8, name: '土鸡蛋', price: 6.9, originalPrice: 9.9, image: 'images/eggs.jpg', category: '蛋类', description: '散养土鸡蛋10枚装，优质蛋白质来源，适合煎、炒、蒸、煮。', rating: 4.7, sales: 2745, tag: 'new', unit: '10枚' },
     // 新增商品，丰富品类
-    { id: 9, name: '鲜橙', price: 7.9, originalPrice: 10.9, image: 'images/apple.jpg', category: '水果', description: '赣南脐橙，新鲜多汁，维C满满。', rating: 4.6, sales: 1890, tag: '', unit: '500g' },
-    { id: 10, name: '菠菜', price: 3.5, originalPrice: 5.5, image: 'images/cucumber.jpg', category: '蔬菜', description: '新鲜嫩菠菜，营养丰富，适合清炒、做汤。', rating: 4.4, sales: 620, tag: '', unit: '300g' },
+    { id: 9, name: '鲜橙', price: 7.9, originalPrice: 10.9, image: 'images/orange.jpg', category: '水果', description: '赣南脐橙，新鲜多汁，维C满满。', rating: 4.6, sales: 1890, tag: '', unit: '500g' },
+    { id: 10, name: '菠菜', price: 3.5, originalPrice: 5.5, image: 'images/bocai.jpg', category: '蔬菜', description: '新鲜嫩菠菜，营养丰富，适合清炒、做汤。', rating: 4.4, sales: 620, tag: '', unit: '300g' },
     { id: 11, name: '牛腱子肉', price: 45.9, originalPrice: 55.9, image: 'images/pork.jpg', category: '肉类', description: '精选牛腱子，适合红烧、卤制，肉质紧实鲜美。', rating: 4.8, sales: 980, tag: 'hot', unit: '500g' },
     { id: 12, name: '酸奶', price: 12.9, originalPrice: 16.9, image: 'images/milk.jpg', category: '乳制品', description: '原味酸奶6杯装，进口菌种发酵，口感醇厚。', rating: 4.7, sales: 2150, tag: 'sale', unit: '6杯' },
 ];
