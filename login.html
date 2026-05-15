@@ -3,51 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登录 - 生鲜购物网站</title>
+    <title>登录 - 鲜直达 · 生鲜购物网站</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥬</text></svg>">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <!-- 此处满足课程要求1：HTML5 语义化标签 header -->
+    <header id="main-header">
         <div class="logo">
-            <img src="images/logo.png" alt="生鲜Logo">
-            <h1>生鲜购物网站</h1>
+            <img src="images/logo.png" alt="生鲜购物网站Logo" loading="lazy">
+            <h1>鲜直达</h1>
         </div>
-        <nav id="navbar">
+        <!-- 此处满足课程要求1：HTML5 语义化标签 nav -->
+        <nav id="navbar" class="nav-menu" aria-label="主导航">
             <a href="index.html">首页</a>
             <a href="index.html#products">商品展示</a>
             <a href="cart.html">购物车</a>
             <a href="orders.html">订单管理</a>
-            <a href="login.html">登录</a>
+            <a href="login.html" class="active">登录</a>
             <a href="register.html">注册</a>
         </nav>
         <div class="header-actions">
-            <button id="dark-mode-toggle" type="button">夜间模式</button>
             <div id="current-date" class="current-date"></div>
+            <button id="dark-mode-toggle" type="button" aria-label="切换深色模式">🌙 夜间</button>
             <div id="user-status"></div>
         </div>
     </header>
+
+    <!-- 此处满足课程要求1：HTML5 语义化标签 main -->
     <main>
-        <section class="form-section">
-            <h2>用户登录</h2>
-            <form id="login-form">
-                <label for="username">用户名:</label>
-                <input type="text" id="username" name="username" autocomplete="username" required>
-                <label for="password">密码:</label>
-                <input type="password" id="password" name="password" autocomplete="current-password" required>
-                <label class="checkbox-label"><input type="checkbox" id="remember-me"> 记住我</label>
-                <button type="submit">登录</button>
+        <!-- 此处满足课程要求1：使用 section 语义标签 -->
+        <!-- 此处满足课程要求5-表单验证：:invalid/:valid 伪类 + 实时验证反馈 -->
+        <section class="form-section" aria-label="用户登录表单">
+            <h2>👤 用户登录</h2>
+            <!-- 此处满足课程要求1：HTML5 语义化标签 form -->
+            <form id="login-form" novalidate>
+                <label for="username">用户名</label>
+                <input type="text" id="username" name="username" placeholder="请输入用户名（至少3个字符）"
+                    autocomplete="username" required minlength="3">
+                <div class="field-hint" id="hint-username"></div>
+
+                <label for="password">密码</label>
+                <input type="password" id="password" name="password" placeholder="请输入密码（至少6个字符）"
+                    autocomplete="current-password" required minlength="6">
+                <div class="field-hint" id="hint-password"></div>
+
+                <label class="checkbox-label">
+                    <input type="checkbox" id="remember-me"> 记住我（下次自动登录）
+                </label>
+
+                <button type="submit">🔐 登录</button>
             </form>
-            <p>还没有账户？<a href="register.html">注册</a></p>
+            <p>还没有账户？<a href="register.html">立即注册 →</a></p>
         </section>
     </main>
-    <footer>
+
+    <!-- 此处满足课程要求1：HTML5 语义化标签 footer -->
+    <!-- 此处满足课程要求6：版权信息 -->
+    <footer role="contentinfo">
         <div class="footer-content">
             <div class="footer-section">
-                <h4>关于我们</h4>
-                <p>生鲜购物网站致力于为您提供最新鲜、最安全的生鲜食材。</p>
+                <h4>🥬 关于鲜直达</h4>
+                <p>鲜直达致力于为您提供最新鲜、最安全的生鲜食材。</p>
             </div>
             <div class="footer-section">
-                <h4>快速链接</h4>
+                <h4>🔗 快速链接</h4>
                 <ul>
                     <li><a href="index.html">首页</a></li>
                     <li><a href="index.html#products">商品展示</a></li>
@@ -55,16 +75,18 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>联系方式</h4>
-                <p>电话: 400-123-4567</p>
-                <p>邮箱: support@freshfood.com</p>
+                <h4>📞 联系方式</h4>
+                <p>客服电话：400-888-6666</p>
+                <p>服务邮箱：support@freshdirect.com</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2023 生鲜购物网站. 版权所有.</p>
+            <p>&copy; 2026 鲜直达生鲜购物网站. 版权所有. | 课程作品 · 网络程序设计实践</p>
         </div>
     </footer>
-    <div id="toast"></div>
+
+    <div id="toast" class="toast"></div>
+    <!-- 此处满足课程要求7：HTML/CSS/JS 分文件存放 -->
     <script src="script.js"></script>
 </body>
 </html>
